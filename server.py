@@ -30,7 +30,7 @@ from mcp.types import (
 # --- Configuration ---
 FREE_LIMIT = 10
 PRO_KEYS = {"demo"}  # demo key for testing
-STRIPE_LINK = "https://buy.stripe.com/eVq28t8Xt83O9PWenp1oI0G"
+STRIPE_LINK = "https://buy.stripe.com/7sYbJ36Pl0Bm9PW6UX1oI0H"
 USAGE: dict[str, int] = {}
 
 # --- Helper: Rate Limiting ---

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Intelligence MCP — $29/mo</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --heading: #f0f6fc;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --orange: #d29922;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        header {
+            text-align: center;
+            padding: 4rem 0 2rem;
+        }
+        header h1 {
+            font-size: 2.75rem;
+            color: var(--heading);
+            margin-bottom: 0.75rem;
+        }
+        header .tagline {
+            font-size: 1.25rem;
+            color: #8b949e;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        header .badge {
+            display: inline-block;
+            background: #1f2937;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 0.3rem 1rem;
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-top: 1rem;
+        }
+
+        .pricing-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            max-width: 420px;
+            margin: 2rem auto;
+        }
+        .pricing-card .price {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--heading);
+        }
+        .pricing-card .price span {
+            font-size: 1.25rem;
+            color: #8b949e;
+        }
+        .pricing-card ul {
+            list-style: none;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+        .pricing-card ul li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .pricing-card ul li::before {
+            content: "✓";
+            color: var(--green);
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 0.85rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: #4c91d6; }
+
+        .features { margin: 4rem 0; }
+        .features h2 {
+            font-size: 1.75rem;
+            color: var(--heading);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .feature-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
+        }
+        .feature-card h3 {
+            color: var(--heading);
+            margin-bottom: 0.5rem;
+        }
+        .feature-card p { color: #8b949e; font-size: 0.95rem; }
+        .feature-card .icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+
+        .tools-section {
+            margin: 4rem 0;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .tools-section h2 {
+            color: var(--heading);
+            margin-bottom: 1rem;
+        }
+        .tools-section code {
+            display: block;
+            background: #1c2333;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 0.75rem 0;
+            overflow-x: auto;
+            color: #a5d6ff;
+            font-size: 0.9rem;
+        }
+
+        .mcp-config {
+            margin: 4rem 0;
+        }
+        .mcp-config h2 {
+            color: var(--heading);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .mcp-config pre {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
+            overflow-x: auto;
+            color: #a5d6ff;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #484f58;
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Company Intelligence MCP</h1>
+            <p class="tagline">
+                One MCP server to pull SEC filings, patent data, domain whois, and SSL
+                certificate info. All free data sources, no API keys needed to start.
+            </p>
+            <span class="badge">⚡ MCP Protocol &bull; SEC EDGAR &bull; USPTO &bull; WHOIS</span>
+        </header>
+
+        <div class="pricing-card">
+            <div class="price">$29 <span>/month</span></div>
+            <ul>
+                <li>250 requests/month</li>
+                <li>All 4 tools: Profile &bull; Financials &bull; Patents &bull; Domain</li>
+                <li>SEC EDGAR filings &amp; financials</li>
+                <li>USPTO patent search</li>
+                <li>WHOIS + SSL + DNS lookup</li>
+                <li>Priority support</li>
+            </ul>
+            <a class="btn" href="https://buy.stripe.com/eVq28t8Xt83O9PWenp1oI0G">Subscribe — $29/mo</a>
+            <p style="margin-top: 0.75rem; font-size: 0.85rem; color: #8b949e;">
+                Free tier: 10 requests/month · No credit card required
+            </p>
+        </div>
+
+        <div class="features">
+            <h2>What you get</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">📊</div>
+                    <h3>SEC Filings</h3>
+                    <p>Latest 10-K, 10-Q, 8-K filings from SEC EDGAR. Financials from XBRL data.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💡</div>
+                    <h3>Patent Search</h3>
+                    <p>Search patents by company name via USPTO open data. Title, number, date, status.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌐</div>
+                    <h3>Domain Intelligence</h3>
+                    <p>WHOIS registration info, DNS A records, SSL certificate details and expiry dates.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔌</div>
+                    <h3>MCP Native</h3>
+                    <p>Works with Claude Desktop, Cursor, VS Code, and any MCP-compatible client.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tools-section">
+            <h2>🛠 Available Tools</h2>
+            <code>
+                company_profile(name/domain)  → SEC filings + patents + domain info<br>
+                company_financials(ticker)    → SEC EDGAR financials (revenue, assets, income)<br>
+                company_patents(name)         → USPTO patent search<br>
+                company_domain(domain)        → WHOIS + DNS + SSL info
+            </code>
+        </div>
+
+        <div class="mcp-config">
+            <h2>⚙️ Claude Desktop Config</h2>
+            <pre>{
+  "mcpServers": {
+    "company-intel": {
+      "command": "python",
+      "args": ["/path/to/company-intel-mcp/server.py"]
+    }
+  }
+}</pre>
+        </div>
+
+        <footer>
+            <p>Company Intelligence MCP &bull; <a href="https://github.com/Rumblingb/company-intel-mcp">GitHub</a> &bull; Data from SEC EDGAR, USPTO, and public WHOIS</p>
+        </footer>
+    </div>
+</body>
+</html>
